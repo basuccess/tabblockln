@@ -18,7 +18,7 @@ tabblockln
 └── README.md              # Project documentation
 ```
 
-Purpose
+## Purpose
 tabblockln automates the handling of Tabblock20 .zip files from the U.S. Census Bureau:
 
 Moves files from ~/Downloads to a structured directory under a specified base path.
@@ -32,7 +32,8 @@ Prerequisites
 Python 3.6+
 Modules: os, re, shutil, zipfile, logging, argparse (standard library)
 Write access to the target base directory
-Installation
+
+## Installation
 Clone or download the repository:
 
 Copy
@@ -41,7 +42,7 @@ cd tabblockln
 
 Ensure constant.py is in the same directory as main.py—it defines state lists and file patterns.
 
-Usage
+## Usage
 Run the script from the command line with optional arguments:
 
 Basic Command
@@ -75,7 +76,7 @@ Directory: /Volumes/T7 Shield/SharedData/USA_Census/48_TX_Texas/
 
 Extracted: tl_2024_48_tabblock20/ (contains tl_2024_48_tabblock20.shp, .shx, etc.)
 
-Symlinks:
+## Symlinks
 tl_48_tabblock20.shp → tl_2024_48_tabblock20/tl_2024_48_tabblock20.shp
 tl_48_tabblock20.shx → tl_2024_48_tabblock20/tl_2024_48_tabblock20.shx
 Troubleshooting
@@ -85,6 +86,13 @@ No Symlinks: Check tabblockln_log.log for “Matched files” or “Symlink crea
 Permission Errors: Verify write access to {base_dir}/USA_Census/ (chmod -R u+w /Volumes/T7\ Shield/SharedData).
 File Not Found: Place Tabblock20 .zip files in ~/Downloads—e.g., download from Census TIGER/Line.
 
-Notes
+## Notes
 Uses constant.py for state codes and file patterns—edit for custom states or formats.
 Tested with 2024 TIGER/Line files—adjust patterns if file naming changes.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contact
+For issues or suggestions, open an issue on GitHub or contact tony.houweling@gmail.com
